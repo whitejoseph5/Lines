@@ -1,0 +1,42 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+canvas {
+    background-color: black;
+    width: 100%;
+    height: auto;
+}
+
+#mainNavbar {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    border-radius: 0;
+    color: #9d9d9d;
+    border: none;
+}
+
+#control {
+    margin-top: 15px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-weight: normal;
+}
+
+#controlLabel {
+    margin-top: 15px;
+    margin-left: 8px;
+    margin-right: 0;
+    font-weight: normal;
+}
+
+#bgColor {
+    margin-top: 14px;
+    margin-left: 8px;
+}

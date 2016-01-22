@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>joe white's canvas animation</title>
+    
+    <link rel="stylesheet" type="text/css" href="lines.css" />
+    <script type="text/javascript" src="lines.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>-->
+</head>
+<body onload="MyAnim.beginDraw();">
+    
+    <!--<nav class="navbar navbar-inverse" id="mainNavbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">just some lines</div>
+            </div>
+            <div class="collapse navbar-collapse">
+            </div>
+        </div>
+    </nav>-->
+    <nav class="navbar navbar-inverse" id="mainNavbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">click it!</div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><label id="controlLabel" for="doubleCheckbox">double</label></li>
+                    <li id="control" style="margin-right: 0;"><input id="doubleCheckbox" type="checkbox" value="" onchange="MyAnim.doublePattern(this.id)"></li>
+                    
+                    <li><label id="controlLabel" for="crayColorCheckbox">check this!</label></li>
+                    <li id="control" style="margin-right: 0;"><input id="crayColorCheckbox" type="checkbox" value="" onchange="MyAnim.switchColors(this.id)"></li>
+
+                    <li><label for="bgColor" id="controlLabel">background</label></li>
+                    <li><input id="bgColor" name="bgColor" type="color" onchange="MyAnim.setBackgroundColor(this.id)" /></li>
+                    
+                    <li id="controlLabel">line width</li>
+                    <li id="control"><input type="range" onchange="MyAnim.setLineWidth();" id="myWidth" name="myWidth" step=".05" min=".05" max="10" value=".05"></li>
+                    
+                    <li id="controlLabel">slope</li>
+                    <li id="control"><input type="range" onchange="MyAnim.setSlope();" id="mySlope" name="mySlope" step=".005" min=".005" max=".995" value=".005"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="padding: 0; margin: 0;">
+        <div class="row">
+            <div class="col-sm-12">
+                <canvas id="myCanvas" width="1600" height="1600" style="margin-top: 0;"></canvas>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
